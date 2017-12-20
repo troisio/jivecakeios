@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51418624D35294AB6862E73C /* Pods_jivecakeios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */; };
+		A0285C0C1FE9FF7D001F82AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0285C0B1FE9FF7D001F82AD /* Auth0.plist */; };
+		A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */; };
+		A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */; };
+		A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */; };
+		A0CCC9F11FE9F8EA003B185B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9F01FE9F8EA003B185B /* ViewController.swift */; };
+		A0CCC9F41FE9F8EA003B185B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F21FE9F8EA003B185B /* Main.storyboard */; };
+		A0CCC9F61FE9F8EA003B185B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */; };
+		A0CCC9F91FE9F8EA003B185B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F71FE9F8EA003B185B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		373E93107901920BA5572202 /* Pods-jivecakeios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.debug.xcconfig"; sourceTree = "<group>"; };
+		3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jivecakeios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.release.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.release.xcconfig"; sourceTree = "<group>"; };
+		A0285C0B1FE9FF7D001F82AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0CCC9F01FE9F8EA003B185B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0CCC9F31FE9F8EA003B185B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0CCC9F81FE9F8EA003B185B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0CCC9FA1FE9F8EA003B185B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0CCC9E81FE9F8EA003B185B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51418624D35294AB6862E73C /* Pods_jivecakeios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		457F6F379B1F3B4CAD459B6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				373E93107901920BA5572202 /* Pods-jivecakeios.debug.xcconfig */,
+				92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D2806CCCCCF25372918A2B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0CCC9E21FE9F8EA003B185B = {
+			isa = PBXGroup;
+			children = (
+				A0CCC9ED1FE9F8EA003B185B /* jivecakeios */,
+				A0CCC9EC1FE9F8EA003B185B /* Products */,
+				457F6F379B1F3B4CAD459B6F /* Pods */,
+				7D2806CCCCCF25372918A2B8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A0CCC9EC1FE9F8EA003B185B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0CCC9ED1FE9F8EA003B185B /* jivecakeios */ = {
+			isa = PBXGroup;
+			children = (
+				A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */,
+				A0CCC9F01FE9F8EA003B185B /* ViewController.swift */,
+				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
+				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
+				A0CCC9F21FE9F8EA003B185B /* Main.storyboard */,
+				A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */,
+				A0CCC9F71FE9F8EA003B185B /* LaunchScreen.storyboard */,
+				A0CCC9FA1FE9F8EA003B185B /* Info.plist */,
+				A0285C0B1FE9FF7D001F82AD /* Auth0.plist */,
+			);
+			path = jivecakeios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0CCC9EA1FE9F8EA003B185B /* jivecakeios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0CCC9FD1FE9F8EA003B185B /* Build configuration list for PBXNativeTarget "jivecakeios" */;
+			buildPhases = (
+				7E6CD6FE050ECA104DB4C927 /* [CP] Check Pods Manifest.lock */,
+				A0CCC9E71FE9F8EA003B185B /* Sources */,
+				A0CCC9E81FE9F8EA003B185B /* Frameworks */,
+				A0CCC9E91FE9F8EA003B185B /* Resources */,
+				340A14C11F38BB115B43E2A4 /* [CP] Embed Pods Frameworks */,
+				73D068D2150EF29EEA28ABFE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jivecakeios;
+			productName = jivecakeios;
+			productReference = A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0CCC9E31FE9F8EA003B185B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = troisio;
+				TargetAttributes = {
+					A0CCC9EA1FE9F8EA003B185B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A0CCC9E61FE9F8EA003B185B /* Build configuration list for PBXProject "jivecakeios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0CCC9E21FE9F8EA003B185B;
+			productRefGroup = A0CCC9EC1FE9F8EA003B185B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0CCC9EA1FE9F8EA003B185B /* jivecakeios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0CCC9E91FE9F8EA003B185B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0CCC9F91FE9F8EA003B185B /* LaunchScreen.storyboard in Resources */,
+				A0CCC9F61FE9F8EA003B185B /* Assets.xcassets in Resources */,
+				A0CCC9F41FE9F8EA003B185B /* Main.storyboard in Resources */,
+				A0285C0C1FE9FF7D001F82AD /* Auth0.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		340A14C11F38BB115B43E2A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D068D2150EF29EEA28ABFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E6CD6FE050ECA104DB4C927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0CCC9E71FE9F8EA003B185B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0CCC9F11FE9F8EA003B185B /* ViewController.swift in Sources */,
+				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
+				A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */,
+				A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0CCC9F21FE9F8EA003B185B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0CCC9F31FE9F8EA003B185B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0CCC9F71FE9F8EA003B185B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0CCC9F81FE9F8EA003B185B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0CCC9FB1FE9F8EA003B185B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0CCC9FC1FE9F8EA003B185B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0CCC9FE1FE9F8EA003B185B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373E93107901920BA5572202 /* Pods-jivecakeios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V6SFZBP9M;
+				INFOPLIST_FILE = jivecakeios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = troisio.jivecakeios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0CCC9FF1FE9F8EA003B185B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V6SFZBP9M;
+				INFOPLIST_FILE = jivecakeios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = troisio.jivecakeios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0CCC9E61FE9F8EA003B185B /* Build configuration list for PBXProject "jivecakeios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0CCC9FB1FE9F8EA003B185B /* Debug */,
+				A0CCC9FC1FE9F8EA003B185B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0CCC9FD1FE9F8EA003B185B /* Build configuration list for PBXNativeTarget "jivecakeios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0CCC9FE1FE9F8EA003B185B /* Debug */,
+				A0CCC9FF1FE9F8EA003B185B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0CCC9E31FE9F8EA003B185B /* Project object */;
+}
