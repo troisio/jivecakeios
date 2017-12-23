@@ -8,26 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		51418624D35294AB6862E73C /* Pods_jivecakeios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */; };
+		A01C5FDE1FEABAEA008584B6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDD1FEABAEA008584B6 /* Transaction.swift */; };
+		A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDF1FEABC89008584B6 /* Permission.swift */; };
 		A0285C0C1FE9FF7D001F82AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0285C0B1FE9FF7D001F82AD /* Auth0.plist */; };
 		A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */; };
 		A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */; };
+		A02F988A1FEAFAA0007B83F1 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98891FEAFAA0007B83F1 /* AnyError.swift */; };
+		A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */; };
+		A02F98921FEB432E007B83F1 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98911FEB432E007B83F1 /* PermissionService.swift */; };
+		A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98931FEB4543007B83F1 /* ApplicationState.swift */; };
+		A02F98961FEB5E75007B83F1 /* DownstreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98951FEB5E75007B83F1 /* DownstreamService.swift */; };
+		A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98971FEB5E91007B83F1 /* Organization.swift */; };
+		A02F989A1FEB5EA1007B83F1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98991FEB5EA1007B83F1 /* Event.swift */; };
+		A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989B1FEB5EB2007B83F1 /* Item.swift */; };
+		A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */; };
+		A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */; };
 		A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */; };
-		A0CCC9F11FE9F8EA003B185B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9F01FE9F8EA003B185B /* ViewController.swift */; };
+		A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */; };
 		A0CCC9F41FE9F8EA003B185B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F21FE9F8EA003B185B /* Main.storyboard */; };
 		A0CCC9F61FE9F8EA003B185B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */; };
 		A0CCC9F91FE9F8EA003B185B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F71FE9F8EA003B185B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A02859491FED9A6400F3CB5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0CCC9E31FE9F8EA003B185B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0CCC9EA1FE9F8EA003B185B;
+			remoteInfo = jivecakeios;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		373E93107901920BA5572202 /* Pods-jivecakeios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.debug.xcconfig"; sourceTree = "<group>"; };
 		3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jivecakeios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.release.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.release.xcconfig"; sourceTree = "<group>"; };
+		A01C5FDD1FEABAEA008584B6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		A01C5FDF1FEABC89008584B6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jivecakeiosTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0285C0B1FE9FF7D001F82AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		A02F98891FEAFAA0007B83F1 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
+		A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
+		A02F98911FEB432E007B83F1 /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+		A02F98931FEB4543007B83F1 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		A02F98951FEB5E75007B83F1 /* DownstreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownstreamService.swift; sourceTree = "<group>"; };
+		A02F98971FEB5E91007B83F1 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		A02F98991FEB5EA1007B83F1 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A02F989B1FEB5EB2007B83F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
+		A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTree.swift; sourceTree = "<group>"; };
 		A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0CCC9F01FE9F8EA003B185B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		A0CCC9F31FE9F8EA003B185B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0CCC9F81FE9F8EA003B185B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A02859411FED9A6400F3CB5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0CCC9E81FE9F8EA003B185B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +105,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A028593F1FED97CB00F3CB5B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
+				A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */,
+				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A02F988D1FEB0054007B83F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A02F98971FEB5E91007B83F1 /* Organization.swift */,
+				A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */,
+				A02F98991FEB5EA1007B83F1 /* Event.swift */,
+				A02F989B1FEB5EB2007B83F1 /* Item.swift */,
+				A01C5FDD1FEABAEA008584B6 /* Transaction.swift */,
+				A01C5FDF1FEABC89008584B6 /* Permission.swift */,
+				A02F98891FEAFAA0007B83F1 /* AnyError.swift */,
+				A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A02F98901FEB4311007B83F1 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A02F98911FEB432E007B83F1 /* PermissionService.swift */,
+				A02F98951FEB5E75007B83F1 /* DownstreamService.swift */,
+				A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 		A0CCC9E21FE9F8EA003B185B = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */,
+				A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,11 +162,12 @@
 		A0CCC9ED1FE9F8EA003B185B /* jivecakeios */ = {
 			isa = PBXGroup;
 			children = (
-				A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */,
-				A0CCC9F01FE9F8EA003B185B /* ViewController.swift */,
-				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
-				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
+				A028593F1FED97CB00F3CB5B /* controller */,
+				A02F98901FEB4311007B83F1 /* service */,
+				A02F988D1FEB0054007B83F1 /* model */,
 				A0CCC9F21FE9F8EA003B185B /* Main.storyboard */,
+				A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */,
+				A02F98931FEB4543007B83F1 /* ApplicationState.swift */,
 				A0CCC9F51FE9F8EA003B185B /* Assets.xcassets */,
 				A0CCC9F71FE9F8EA003B185B /* LaunchScreen.storyboard */,
 				A0CCC9FA1FE9F8EA003B185B /* Info.plist */,
@@ -100,6 +179,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A02859431FED9A6400F3CB5B /* jivecakeiosTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A028594B1FED9A6400F3CB5B /* Build configuration list for PBXNativeTarget "jivecakeiosTest" */;
+			buildPhases = (
+				A02859401FED9A6400F3CB5B /* Sources */,
+				A02859411FED9A6400F3CB5B /* Frameworks */,
+				A02859421FED9A6400F3CB5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A028594A1FED9A6400F3CB5B /* PBXTargetDependency */,
+			);
+			name = jivecakeiosTest;
+			productName = jivecakeiosTest;
+			productReference = A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A0CCC9EA1FE9F8EA003B185B /* jivecakeios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0CCC9FD1FE9F8EA003B185B /* Build configuration list for PBXNativeTarget "jivecakeios" */;
@@ -130,6 +227,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = troisio;
 				TargetAttributes = {
+					A02859431FED9A6400F3CB5B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A0CCC9EA1FE9F8EA003B185B;
+					};
 					A0CCC9EA1FE9F8EA003B185B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -150,11 +252,19 @@
 			projectRoot = "";
 			targets = (
 				A0CCC9EA1FE9F8EA003B185B /* jivecakeios */,
+				A02859431FED9A6400F3CB5B /* jivecakeiosTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A02859421FED9A6400F3CB5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0CCC9E91FE9F8EA003B185B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,18 +327,45 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A02859401FED9A6400F3CB5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0CCC9E71FE9F8EA003B185B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CCC9F11FE9F8EA003B185B /* ViewController.swift in Sources */,
+				A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */,
+				A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */,
+				A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */,
+				A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */,
+				A02F98961FEB5E75007B83F1 /* DownstreamService.swift in Sources */,
 				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
+				A02F988A1FEAFAA0007B83F1 /* AnyError.swift in Sources */,
+				A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */,
+				A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */,
 				A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */,
+				A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */,
+				A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */,
 				A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */,
+				A02F98921FEB432E007B83F1 /* PermissionService.swift in Sources */,
+				A02F989A1FEB5EA1007B83F1 /* Event.swift in Sources */,
+				A01C5FDE1FEABAEA008584B6 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A028594A1FED9A6400F3CB5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0CCC9EA1FE9F8EA003B185B /* jivecakeios */;
+			targetProxy = A02859491FED9A6400F3CB5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A0CCC9F21FE9F8EA003B185B /* Main.storyboard */ = {
@@ -250,6 +387,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A028594C1FED9A6400F3CB5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V6SFZBP9M;
+				INFOPLIST_FILE = jivecakeiosTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = troisio.jivecakeiosTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jivecakeios.app/jivecakeios";
+			};
+			name = Debug;
+		};
+		A028594D1FED9A6400F3CB5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V6SFZBP9M;
+				INFOPLIST_FILE = jivecakeiosTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = troisio.jivecakeiosTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jivecakeios.app/jivecakeios";
+			};
+			name = Release;
+		};
 		A0CCC9FB1FE9F8EA003B185B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -392,6 +561,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A028594B1FED9A6400F3CB5B /* Build configuration list for PBXNativeTarget "jivecakeiosTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A028594C1FED9A6400F3CB5B /* Debug */,
+				A028594D1FED9A6400F3CB5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A0CCC9E61FE9F8EA003B185B /* Build configuration list for PBXProject "jivecakeios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
