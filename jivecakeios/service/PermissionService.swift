@@ -28,9 +28,9 @@ class PermissionService {
                             id: json["id"].stringValue,
                             user_id: json["user_id"].stringValue,
                             objectId: json["objectId"].stringValue,
-                            include: json["include"].intValue,
                             objectClass: json["objectClass"].stringValue,
-                            permissions: json["permissions"].arrayValue.map { $0.intValue },
+                            read: json["read"].boolValue,
+                            write: json["write"].boolValue,
                             timeCreated: json["timeCreated"].intValue
                         )
                     }

@@ -10,9 +10,9 @@ class TransactionViewController: UIViewController {
         let storage = ApplicationState.storage!
 
         storage.permissionService.search(
-            parameters: ["userId": storage.profile.sub]
+            parameters: ["user_id": storage.profile.sub]
         ).onSuccess { permissions in
-            self.permissions = permissions
+            self.permissions = permissions.filter {$0.objectClass == "Organization"}
         }.onFailure { error in
             let alert = UIAlertController(
                 title: "Unable to retrieve data",

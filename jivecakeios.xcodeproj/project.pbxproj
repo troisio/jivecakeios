@@ -23,6 +23,7 @@
 		A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989B1FEB5EB2007B83F1 /* Item.swift */; };
 		A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */; };
 		A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */; };
+		A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0738A251FF4971C005E063E /* JsonMappingService.swift */; };
 		A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */; };
 		A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */; };
 		A0CCC9F41FE9F8EA003B185B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F21FE9F8EA003B185B /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		A02F989B1FEB5EB2007B83F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
 		A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTree.swift; sourceTree = "<group>"; };
+		A0738A251FF4971C005E063E /* JsonMappingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappingService.swift; sourceTree = "<group>"; };
 		A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A02F98911FEB432E007B83F1 /* PermissionService.swift */,
 				A02F98951FEB5E75007B83F1 /* DownstreamService.swift */,
 				A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */,
+				A0738A251FF4971C005E063E /* JsonMappingService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */,
 				A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */,
 				A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */,
 				A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */,
