@@ -4,8 +4,10 @@ import SwiftyJSON
 
 class PermissionService {
     let idToken: String
+    let uri: String
 
-    init(idToken: String) {
+    init(uri: String, idToken: String) {
+        self.uri = uri
         self.idToken = idToken
     }
 
@@ -16,7 +18,7 @@ class PermissionService {
 
         return Future<[Permission], AnyError> { complete in
             Alamofire.request(
-                "https://api.jivecake.com/permission",
+                "\(self.uri)/permission",
                 parameters: parameters,
                 headers: headers
             ).responseJSON { response in

@@ -1,17 +1,19 @@
 import Auth0
 
 struct ApplicationStorage {
+    let jiveCakeUri = "https://api.jivecake.com"
     let profile: UserInfo
     let credentials: Credentials
     let permissionService: PermissionService
-    let downstreamService: DownstreamService
     let organizationService: OrganizationService
+
+    var organizationTrees: [OrganizationTree] = []
+    var permissions: [Permission] = []
 
     init(profile: UserInfo, credentials: Credentials) {
         self.profile = profile
         self.credentials = credentials
-        self.permissionService = PermissionService(idToken: credentials.idToken!)
-        self.downstreamService = DownstreamService(idToken: credentials.idToken!)
-        self.organizationService = OrganizationService(idToken: credentials.idToken!)
+        self.permissionService = PermissionService(uri: self.jiveCakeUri, idToken: credentials.idToken!)
+        self.organizationService = OrganizationService(uri: self.jiveCakeUri, idToken: credentials.idToken!)
     }
 }

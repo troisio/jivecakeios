@@ -10,6 +10,7 @@
 		51418624D35294AB6862E73C /* Pods_jivecakeios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */; };
 		A01C5FDE1FEABAEA008584B6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDD1FEABAEA008584B6 /* Transaction.swift */; };
 		A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDF1FEABC89008584B6 /* Permission.swift */; };
+		A01DEAB31FF99A7C00FE6922 /* EntityAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */; };
 		A0285C0C1FE9FF7D001F82AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0285C0B1FE9FF7D001F82AD /* Auth0.plist */; };
 		A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */; };
 		A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */; };
@@ -17,13 +18,19 @@
 		A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */; };
 		A02F98921FEB432E007B83F1 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98911FEB432E007B83F1 /* PermissionService.swift */; };
 		A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98931FEB4543007B83F1 /* ApplicationState.swift */; };
-		A02F98961FEB5E75007B83F1 /* DownstreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98951FEB5E75007B83F1 /* DownstreamService.swift */; };
 		A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98971FEB5E91007B83F1 /* Organization.swift */; };
 		A02F989A1FEB5EA1007B83F1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98991FEB5EA1007B83F1 /* Event.swift */; };
 		A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989B1FEB5EB2007B83F1 /* Item.swift */; };
 		A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */; };
 		A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */; };
 		A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0738A251FF4971C005E063E /* JsonMappingService.swift */; };
+		A09CC9801FF55BCF004C138F /* PaymentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC97F1FF55BCE004C138F /* PaymentProfile.swift */; };
+		A09CC9821FF5659C004C138F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC9811FF5659B004C138F /* UserData.swift */; };
+		A09CC9841FF56E65004C138F /* ItemCountAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC9831FF56E65004C138F /* ItemCountAmount.swift */; };
+		A09CC9861FF56EBC004C138F /* ItemTimeAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC9851FF56EBC004C138F /* ItemTimeAmount.swift */; };
+		A0BD6E3D1FF82CDC00DD98F8 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD6E3C1FF82CDC00DD98F8 /* TransactionRow.swift */; };
+		A0BD6E3F1FF82D4700DD98F8 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD6E3E1FF82D4700DD98F8 /* TransactionService.swift */; };
+		A0BD6E421FF8350000DD98F8 /* TransactionRowTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BD6E411FF8350000DD98F8 /* TransactionRowTableCell.swift */; };
 		A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */; };
 		A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */; };
 		A0CCC9F41FE9F8EA003B185B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CCC9F21FE9F8EA003B185B /* Main.storyboard */; };
@@ -47,7 +54,7 @@
 		92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.release.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.release.xcconfig"; sourceTree = "<group>"; };
 		A01C5FDD1FEABAEA008584B6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A01C5FDF1FEABC89008584B6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
-		A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jivecakeiosTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityAsset.swift; sourceTree = "<group>"; };
 		A0285C0B1FE9FF7D001F82AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -55,14 +62,21 @@
 		A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
 		A02F98911FEB432E007B83F1 /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
 		A02F98931FEB4543007B83F1 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
-		A02F98951FEB5E75007B83F1 /* DownstreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownstreamService.swift; sourceTree = "<group>"; };
 		A02F98971FEB5E91007B83F1 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		A02F98991FEB5EA1007B83F1 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A02F989B1FEB5EB2007B83F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
 		A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTree.swift; sourceTree = "<group>"; };
+		A06B41421FF6DED60032D619 /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A06B41431FF6DED60032D619 /* jivecakeiosTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jivecakeiosTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0738A251FF4971C005E063E /* JsonMappingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappingService.swift; sourceTree = "<group>"; };
-		A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09CC97F1FF55BCE004C138F /* PaymentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProfile.swift; sourceTree = "<group>"; };
+		A09CC9811FF5659B004C138F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A09CC9831FF56E65004C138F /* ItemCountAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCountAmount.swift; sourceTree = "<group>"; };
+		A09CC9851FF56EBC004C138F /* ItemTimeAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTimeAmount.swift; sourceTree = "<group>"; };
+		A0BD6E3C1FF82CDC00DD98F8 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		A0BD6E3E1FF82D4700DD98F8 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		A0BD6E411FF8350000DD98F8 /* TransactionRowTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowTableCell.swift; sourceTree = "<group>"; };
 		A0CCC9EE1FE9F8EA003B185B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		A0CCC9F31FE9F8EA003B185B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,9 +124,9 @@
 		A028593F1FED97CB00F3CB5B /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
 				A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */,
 				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
+				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -120,14 +134,20 @@
 		A02F988D1FEB0054007B83F1 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				A02F98971FEB5E91007B83F1 /* Organization.swift */,
-				A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */,
-				A02F98991FEB5EA1007B83F1 /* Event.swift */,
-				A02F989B1FEB5EB2007B83F1 /* Item.swift */,
-				A01C5FDD1FEABAEA008584B6 /* Transaction.swift */,
-				A01C5FDF1FEABC89008584B6 /* Permission.swift */,
 				A02F98891FEAFAA0007B83F1 /* AnyError.swift */,
 				A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */,
+				A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */,
+				A02F98991FEB5EA1007B83F1 /* Event.swift */,
+				A02F989B1FEB5EB2007B83F1 /* Item.swift */,
+				A09CC9831FF56E65004C138F /* ItemCountAmount.swift */,
+				A09CC9851FF56EBC004C138F /* ItemTimeAmount.swift */,
+				A02F98971FEB5E91007B83F1 /* Organization.swift */,
+				A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */,
+				A09CC97F1FF55BCE004C138F /* PaymentProfile.swift */,
+				A01C5FDF1FEABC89008584B6 /* Permission.swift */,
+				A01C5FDD1FEABAEA008584B6 /* Transaction.swift */,
+				A09CC9811FF5659B004C138F /* UserData.swift */,
+				A0BD6E3C1FF82CDC00DD98F8 /* TransactionRow.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -136,35 +156,36 @@
 			isa = PBXGroup;
 			children = (
 				A02F98911FEB432E007B83F1 /* PermissionService.swift */,
-				A02F98951FEB5E75007B83F1 /* DownstreamService.swift */,
 				A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */,
 				A0738A251FF4971C005E063E /* JsonMappingService.swift */,
+				A0BD6E3E1FF82D4700DD98F8 /* TransactionService.swift */,
 			);
 			path = service;
+			sourceTree = "<group>";
+		};
+		A0BD6E401FF834CE00DD98F8 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD6E411FF8350000DD98F8 /* TransactionRowTableCell.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		A0CCC9E21FE9F8EA003B185B = {
 			isa = PBXGroup;
 			children = (
 				A0CCC9ED1FE9F8EA003B185B /* jivecakeios */,
-				A0CCC9EC1FE9F8EA003B185B /* Products */,
 				457F6F379B1F3B4CAD459B6F /* Pods */,
 				7D2806CCCCCF25372918A2B8 /* Frameworks */,
+				A06B41421FF6DED60032D619 /* jivecakeios.app */,
+				A06B41431FF6DED60032D619 /* jivecakeiosTest.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		A0CCC9EC1FE9F8EA003B185B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */,
-				A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A0CCC9ED1FE9F8EA003B185B /* jivecakeios */ = {
 			isa = PBXGroup;
 			children = (
+				A0BD6E401FF834CE00DD98F8 /* ui */,
 				A028593F1FED97CB00F3CB5B /* controller */,
 				A02F98901FEB4311007B83F1 /* service */,
 				A02F988D1FEB0054007B83F1 /* model */,
@@ -197,7 +218,7 @@
 			);
 			name = jivecakeiosTest;
 			productName = jivecakeiosTest;
-			productReference = A02859441FED9A6400F3CB5B /* jivecakeiosTest.xctest */;
+			productReference = A06B41431FF6DED60032D619 /* jivecakeiosTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A0CCC9EA1FE9F8EA003B185B /* jivecakeios */ = {
@@ -217,7 +238,7 @@
 			);
 			name = jivecakeios;
 			productName = jivecakeios;
-			productReference = A0CCC9EB1FE9F8EA003B185B /* jivecakeios.app */;
+			productReference = A06B41421FF6DED60032D619 /* jivecakeios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +271,7 @@
 				Base,
 			);
 			mainGroup = A0CCC9E21FE9F8EA003B185B;
-			productRefGroup = A0CCC9EC1FE9F8EA003B185B /* Products */;
+			productRefGroup = A0CCC9E21FE9F8EA003B185B;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -341,23 +362,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09CC9801FF55BCF004C138F /* PaymentProfile.swift in Sources */,
 				A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */,
 				A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */,
+				A09CC9821FF5659C004C138F /* UserData.swift in Sources */,
 				A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */,
 				A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */,
 				A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */,
-				A02F98961FEB5E75007B83F1 /* DownstreamService.swift in Sources */,
+				A0BD6E3D1FF82CDC00DD98F8 /* TransactionRow.swift in Sources */,
 				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
 				A02F988A1FEAFAA0007B83F1 /* AnyError.swift in Sources */,
 				A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */,
 				A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */,
 				A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */,
+				A0BD6E421FF8350000DD98F8 /* TransactionRowTableCell.swift in Sources */,
 				A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */,
 				A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */,
 				A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */,
 				A02F98921FEB432E007B83F1 /* PermissionService.swift in Sources */,
+				A09CC9861FF56EBC004C138F /* ItemTimeAmount.swift in Sources */,
+				A09CC9841FF56E65004C138F /* ItemCountAmount.swift in Sources */,
 				A02F989A1FEB5EA1007B83F1 /* Event.swift in Sources */,
+				A01DEAB31FF99A7C00FE6922 /* EntityAsset.swift in Sources */,
 				A01C5FDE1FEABAEA008584B6 /* Transaction.swift in Sources */,
+				A0BD6E3F1FF82D4700DD98F8 /* TransactionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
