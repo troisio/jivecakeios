@@ -29,9 +29,13 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
         self.performSegue(withIdentifier: "selectTranscation", sender: self)
     }
 
+    func searchBarSearchButtonClicked(_ bar: UISearchBar) {
+        bar.resignFirstResponder()
+    }
+
     func searchBar(_ searchBar: UISearchBar, textDidChange search: String) {
         func isFiltered(row: TransactionRow) -> Bool {
-            let components: [String] = [
+            let components = [
                 row.transaction.given_name,
                 row.transaction.middleName,
                 row.transaction.family_name,
