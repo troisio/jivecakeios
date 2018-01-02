@@ -23,6 +23,9 @@
 		A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989B1FEB5EB2007B83F1 /* Item.swift */; };
 		A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */; };
 		A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */; };
+		A0440D191FFB01CD00DADD48 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D181FFB01CC00DADD48 /* Currency.swift */; };
+		A0440D1B1FFB100200DADD48 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D1A1FFB100200DADD48 /* Color.swift */; };
+		A0440D1D1FFB115000DADD48 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D1C1FFB115000DADD48 /* ApplicationService.swift */; };
 		A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0738A251FF4971C005E063E /* JsonMappingService.swift */; };
 		A09CC9801FF55BCF004C138F /* PaymentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC97F1FF55BCE004C138F /* PaymentProfile.swift */; };
 		A09CC9821FF5659C004C138F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC9811FF5659B004C138F /* UserData.swift */; };
@@ -67,6 +70,9 @@
 		A02F989B1FEB5EB2007B83F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
 		A02F989F1FEB5F04007B83F1 /* OrganizationTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTree.swift; sourceTree = "<group>"; };
+		A0440D181FFB01CC00DADD48 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		A0440D1A1FFB100200DADD48 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A0440D1C1FFB115000DADD48 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		A06B41421FF6DED60032D619 /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B41431FF6DED60032D619 /* jivecakeiosTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jivecakeiosTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0738A251FF4971C005E063E /* JsonMappingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappingService.swift; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 			children = (
 				A02F98891FEAFAA0007B83F1 /* AnyError.swift */,
 				A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */,
+				A0440D181FFB01CC00DADD48 /* Currency.swift */,
 				A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */,
 				A02F98991FEB5EA1007B83F1 /* Event.swift */,
 				A02F989B1FEB5EB2007B83F1 /* Item.swift */,
@@ -155,6 +162,7 @@
 		A02F98901FEB4311007B83F1 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				A0440D1C1FFB115000DADD48 /* ApplicationService.swift */,
 				A02F98911FEB432E007B83F1 /* PermissionService.swift */,
 				A02F989D1FEB5ED1007B83F1 /* OrganizationService.swift */,
 				A0738A251FF4971C005E063E /* JsonMappingService.swift */,
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BD6E411FF8350000DD98F8 /* TransactionRowTableCell.swift */,
+				A0440D1A1FFB100200DADD48 /* Color.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -363,11 +372,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09CC9801FF55BCF004C138F /* PaymentProfile.swift in Sources */,
+				A0440D1D1FFB115000DADD48 /* ApplicationService.swift in Sources */,
 				A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */,
 				A0CCC9F11FE9F8EA003B185B /* AuthenticationViewController.swift in Sources */,
 				A09CC9821FF5659C004C138F /* UserData.swift in Sources */,
 				A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */,
 				A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */,
+				A0440D191FFB01CD00DADD48 /* Currency.swift in Sources */,
 				A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */,
 				A0BD6E3D1FF82CDC00DD98F8 /* TransactionRow.swift in Sources */,
 				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
@@ -378,6 +389,7 @@
 				A0BD6E421FF8350000DD98F8 /* TransactionRowTableCell.swift in Sources */,
 				A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */,
 				A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */,
+				A0440D1B1FFB100200DADD48 /* Color.swift in Sources */,
 				A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */,
 				A02F98921FEB432E007B83F1 /* PermissionService.swift in Sources */,
 				A09CC9861FF56EBC004C138F /* ItemTimeAmount.swift in Sources */,

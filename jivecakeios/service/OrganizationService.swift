@@ -33,7 +33,7 @@ class OrganizationService {
                         let transactionUsersAssets = data["transactionUserAsset"].arrayValue.map { JsonMappingService.toAsset(json: $0) }
                         let organizationAssets = data["organizationAsset"].arrayValue.map { JsonMappingService.toAsset(json: $0) }
                         let organization = JsonMappingService.toOrganization(json: data["organization"])
-dump(transactionUsers)
+
                         let tree = OrganizationTree(
                             organization: organization,
                             items: items,
