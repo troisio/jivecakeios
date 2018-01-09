@@ -57,7 +57,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
     }
 
     override  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "selectTranscation", sender: self)
+        //self.performSegue(withIdentifier: "selectTranscation", sender: self)
     }
     
     func searchBarSearchButtonClicked(_ bar: UISearchBar) {
