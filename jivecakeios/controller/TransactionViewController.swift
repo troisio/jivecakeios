@@ -4,7 +4,8 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
     var displayRows: [TransactionRow] = []
     var rows: [TransactionRow] = []
     let reloadControl = UIRefreshControl()
-
+    var selectedRow: TransactionRow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +26,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
         /* this is not correct, has to be derived from search bar */
         self.displayRows = self.rows
     }
-    
+
     @objc func onRefresh(_ sender: Any) {
         ApplicationService.getStorageFromCredentials(credentials: ApplicationState.storage!.credentials)
             .onSuccess { storage in
@@ -45,7 +46,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
             }
         
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionRowTableCell") as! TransactionRowTableCell
         cell.update(row: self.displayRows[indexPath.row])
@@ -56,8 +57,19 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
         return displayRows.count
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier ?? nil) == "selectTranscation" {
+            let controller = segue.destination as! TransactionDetailViewController
+            controller.transaction = selectedRow?.transaction
+            controller.item = selectedRow?.item
+            controller.event = selectedRow?.event
+            controller.userInfo = selectedRow?.userInfo
+        }
+    }
+
     override  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //self.performSegue(withIdentifier: "selectTranscation", sender: self)
+        self.selectedRow = self.displayRows[indexPath.row]
+        self.performSegue(withIdentifier: "selectTranscation", sender: self)
     }
     
     func searchBarSearchButtonClicked(_ bar: UISearchBar) {

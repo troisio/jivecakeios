@@ -6,6 +6,7 @@ struct ApplicationStorage {
     let credentials: Credentials
     let permissionService: PermissionService
     let organizationService: OrganizationService
+    let transactionService: TransactionService
 
     var organizationTrees: [OrganizationTree] = []
     var permissions: [Permission] = []
@@ -15,5 +16,6 @@ struct ApplicationStorage {
         self.credentials = credentials
         self.permissionService = PermissionService(uri: self.jiveCakeUri, idToken: credentials.idToken!)
         self.organizationService = OrganizationService(uri: self.jiveCakeUri, idToken: credentials.idToken!)
+        self.transactionService = TransactionService(uri: self.jiveCakeUri, idToken: credentials.idToken!)
     }
 }

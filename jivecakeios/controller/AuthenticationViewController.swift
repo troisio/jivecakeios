@@ -6,6 +6,10 @@ import Alamofire
 class AuthenticationViewController: UIViewController {
     let activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
+    override func viewDidLoad() {
+        ApplicationState.storage = nil
+    }
+
     @IBAction func onSignInClick() {
         if !self.activity.isAnimating {
             self.view.addSubview(self.activity)
@@ -25,24 +29,24 @@ class AuthenticationViewController: UIViewController {
                             complete(.success(credentials))
                         }
                 }
-                }.flatMap {
-                    ApplicationService.getStorageFromCredentials(credentials: $0)
-                }.onSuccess { storage in
-                    ApplicationState.storage = storage
-                    self.performSegue(withIdentifier: "signin", sender: self)
-                    self.activity.stopAnimating()
-                    self.activity.removeFromSuperview()
-                }.onFailure { error in
-                    self.activity.stopAnimating()
-                    self.activity.removeFromSuperview()
+            }.flatMap {
+                ApplicationService.getStorageFromCredentials(credentials: $0)
+            }.onSuccess { storage in
+                ApplicationState.storage = storage
+                self.performSegue(withIdentifier: "signin", sender: self)
+                self.activity.stopAnimating()
+                self.activity.removeFromSuperview()
+            }.onFailure { error in
+                self.activity.stopAnimating()
+                self.activity.removeFromSuperview()
 
-                    let alert = UIAlertController(
-                        title: "Unable to log in",
-                        message: error.localizedDescription,
-                        preferredStyle: UIAlertControllerStyle.alert
-                    )
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default))
-                    self.present(alert, animated: true, completion: nil)
+                let alert = UIAlertController(
+                    title: "Unable to log in",
+                    message: error.localizedDescription,
+                    preferredStyle: UIAlertControllerStyle.alert
+                )
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

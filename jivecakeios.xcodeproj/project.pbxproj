@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51418624D35294AB6862E73C /* Pods_jivecakeios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */; };
+		A01C54BD2005B05400FAB2C1 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C54BC2005B05400FAB2C1 /* TransactionDetailViewController.swift */; };
 		A01C5FDE1FEABAEA008584B6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDD1FEABAEA008584B6 /* Transaction.swift */; };
 		A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDF1FEABC89008584B6 /* Permission.swift */; };
 		A01DEAB31FF99A7C00FE6922 /* EntityAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */; };
@@ -55,6 +56,7 @@
 		373E93107901920BA5572202 /* Pods-jivecakeios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.debug.xcconfig"; sourceTree = "<group>"; };
 		3EE08AA7665093BE5F1DF47D /* Pods_jivecakeios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jivecakeios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AED33B17305052994987B1 /* Pods-jivecakeios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jivecakeios.release.xcconfig"; path = "Pods/Target Support Files/Pods-jivecakeios/Pods-jivecakeios.release.xcconfig"; sourceTree = "<group>"; };
+		A01C54BC2005B05400FAB2C1 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		A01C5FDD1FEABAEA008584B6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A01C5FDF1FEABC89008584B6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityAsset.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */,
 				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
 				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
+				A01C54BC2005B05400FAB2C1 /* TransactionDetailViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				A0BD6E3D1FF82CDC00DD98F8 /* TransactionRow.swift in Sources */,
 				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
 				A02F988A1FEAFAA0007B83F1 /* AnyError.swift in Sources */,
+				A01C54BD2005B05400FAB2C1 /* TransactionDetailViewController.swift in Sources */,
 				A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */,
 				A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */,
 				A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */,

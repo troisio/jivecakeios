@@ -9,36 +9,6 @@ class TransactionRowTableCell: UITableViewCell {
     @IBOutlet weak var currency: UILabel!
 
     func update(row: TransactionRow) {
-        var identity = ""
-
-        if let userInfo = row.userInfo {
-            if userInfo.givenName == nil && userInfo.familyName == nil {
-                identity = userInfo.name ?? userInfo.email ?? ""
-            } else {
-                identity += userInfo.givenName ?? ""
-
-                if userInfo.familyName != nil {
-                    if identity == "" {
-                        identity += " "
-                    }
-                    
-                    identity += "\(userInfo.familyName!)"
-                }
-            }
-        } else {
-            identity = row.transaction.given_name ?? ""
-
-            if identity != "" && row.transaction.family_name != nil {
-                identity += " "
-            }
-
-            identity += row.transaction.family_name ?? ""
-            
-            if identity == "" {
-                identity = row.transaction.email ?? ""
-            }
-        }
-
         var plusMinusText = ""
         var amountText = ""
         var statusText = ""
@@ -83,7 +53,7 @@ class TransactionRowTableCell: UITableViewCell {
         self.status.text = statusText
         self.plusMinus.text = plusMinusText
         self.amount.text = amountText
-        self.identity.text = identity
+        self.identity.text = TransactionService.derivedDisplayedTransactionIdentity(transaction: row.transaction, userInfo: row.userInfo)
         self.item.text = row.item.name
     }
 }
