@@ -13,7 +13,6 @@
 		A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C5FDF1FEABC89008584B6 /* Permission.swift */; };
 		A01DEAB31FF99A7C00FE6922 /* EntityAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */; };
 		A0285C0C1FE9FF7D001F82AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0285C0B1FE9FF7D001F82AD /* Auth0.plist */; };
-		A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */; };
 		A0285C101FEA0B2F001F82AD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */; };
 		A02F988A1FEAFAA0007B83F1 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F98891FEAFAA0007B83F1 /* AnyError.swift */; };
 		A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */; };
@@ -27,6 +26,7 @@
 		A0440D191FFB01CD00DADD48 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D181FFB01CC00DADD48 /* Currency.swift */; };
 		A0440D1B1FFB100200DADD48 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D1A1FFB100200DADD48 /* Color.swift */; };
 		A0440D1D1FFB115000DADD48 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0440D1C1FFB115000DADD48 /* ApplicationService.swift */; };
+		A047AA1F2007107F007628BE /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047AA1E2007107F007628BE /* ScannerViewController.swift */; };
 		A0738A261FF4971C005E063E /* JsonMappingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0738A251FF4971C005E063E /* JsonMappingService.swift */; };
 		A09CC9801FF55BCF004C138F /* PaymentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC97F1FF55BCE004C138F /* PaymentProfile.swift */; };
 		A09CC9821FF5659C004C138F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09CC9811FF5659B004C138F /* UserData.swift */; };
@@ -61,7 +61,6 @@
 		A01C5FDF1FEABC89008584B6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		A01DEAB21FF99A7C00FE6922 /* EntityAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityAsset.swift; sourceTree = "<group>"; };
 		A0285C0B1FE9FF7D001F82AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
-		A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		A02F98891FEAFAA0007B83F1 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
 		A02F988E1FEB00ED007B83F1 /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		A0440D181FFB01CC00DADD48 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		A0440D1A1FFB100200DADD48 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A0440D1C1FFB115000DADD48 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		A047AA1E2007107F007628BE /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		A06B41421FF6DED60032D619 /* jivecakeios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jivecakeios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B41431FF6DED60032D619 /* jivecakeiosTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jivecakeiosTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0738A251FF4971C005E063E /* JsonMappingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMappingService.swift; sourceTree = "<group>"; };
@@ -133,9 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				A0CCC9F01FE9F8EA003B185B /* AuthenticationViewController.swift */,
-				A0285C0D1FEA0A19001F82AD /* QRCodeScannerViewController.swift */,
 				A0285C0F1FEA0B2F001F82AD /* TransactionViewController.swift */,
 				A01C54BC2005B05400FAB2C1 /* TransactionDetailViewController.swift */,
+				A047AA1E2007107F007628BE /* ScannerViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -382,6 +382,7 @@
 				A02F98981FEB5E91007B83F1 /* Organization.swift in Sources */,
 				A02F988F1FEB00ED007B83F1 /* ApplicationStorage.swift in Sources */,
 				A0440D191FFB01CD00DADD48 /* Currency.swift in Sources */,
+				A047AA1F2007107F007628BE /* ScannerViewController.swift in Sources */,
 				A02F98A01FEB5F04007B83F1 /* OrganizationTree.swift in Sources */,
 				A0BD6E3D1FF82CDC00DD98F8 /* TransactionRow.swift in Sources */,
 				A0CCC9EF1FE9F8EA003B185B /* AppDelegate.swift in Sources */,
@@ -389,7 +390,6 @@
 				A01C54BD2005B05400FAB2C1 /* TransactionDetailViewController.swift in Sources */,
 				A01C5FE01FEABC89008584B6 /* Permission.swift in Sources */,
 				A02F98941FEB4543007B83F1 /* ApplicationState.swift in Sources */,
-				A0285C0E1FEA0A19001F82AD /* QRCodeScannerViewController.swift in Sources */,
 				A0BD6E421FF8350000DD98F8 /* TransactionRowTableCell.swift in Sources */,
 				A02F989E1FEB5ED1007B83F1 /* OrganizationService.swift in Sources */,
 				A02F989C1FEB5EB2007B83F1 /* Item.swift in Sources */,

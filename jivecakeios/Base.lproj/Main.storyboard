@@ -36,12 +36,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="wbm-t2-96H"/>
                     <connections>
-                        <segue destination="H4f-N6-Kud" kind="show" identifier="signin" id="RNi-de-RZQ"/>
+                        <segue destination="kTx-mE-NWz" kind="show" identifier="signin" id="hct-hK-IYR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1350" y="145"/>
+            <point key="canvasLocation" x="-1067" y="143"/>
         </scene>
         <!--Transactions-->
         <scene sceneID="mCR-cj-HuQ">
@@ -58,7 +58,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftC-ds-RDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2201" y="145"/>
+            <point key="canvasLocation" x="-1549" y="143"/>
         </scene>
         <!--Transaction Detail View Controller-->
         <scene sceneID="IlV-kD-SJf">
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdR-KF-I8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="145"/>
+            <point key="canvasLocation" x="324" y="143"/>
         </scene>
         <!--Transaction View Controller-->
         <scene sceneID="PWK-iF-zNW">
@@ -261,13 +261,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-vJ-8k5" userLabel="Currency">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Y-Og-lGg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="21.5"/>
+                                                                    <rect key="frame" x="187.5" y="0.0" width="0.0" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -308,7 +308,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0V-vO-f6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="145"/>
+            <point key="canvasLocation" x="324" y="-709"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Qp-3Y-Omy">
+            <objects>
+                <viewController id="kTx-mE-NWz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipw-oO-Sqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ndf-2W-aIg">
+                                <rect key="frame" x="-0.5" y="32" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-oZ-AOP" userLabel="ToTransactions">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Transactions"/>
+                                        <connections>
+                                            <segue destination="H4f-N6-Kud" kind="show" identifier="toTransactions" id="cif-9v-Obb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-nC-LUa" userLabel="Scanner">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Scanner"/>
+                                        <connections>
+                                            <segue destination="kGp-L7-qeQ" kind="show" identifier="toScanner" id="zuL-eC-11c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ndf-2W-aIg" firstAttribute="height" secondItem="ipw-oO-Sqs" secondAttribute="height" id="2Ws-Mp-Dh9"/>
+                            <constraint firstItem="Ndf-2W-aIg" firstAttribute="width" secondItem="ipw-oO-Sqs" secondAttribute="width" id="GJV-Vp-0Fm"/>
+                            <constraint firstItem="Ndf-2W-aIg" firstAttribute="centerY" secondItem="18Z-GR-q7l" secondAttribute="centerY" id="plj-ae-aSv"/>
+                            <constraint firstItem="Ndf-2W-aIg" firstAttribute="centerX" secondItem="18Z-GR-q7l" secondAttribute="centerX" id="v75-DA-YWE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="18Z-GR-q7l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auz-SE-VPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="143"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="qA5-Ue-ONy">
+            <objects>
+                <viewController id="kGp-L7-qeQ" customClass="ScannerViewController" customModule="jivecakeios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AXP-Ln-vtd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iej-1T-k6N"/>
+                    </view>
+                    <connections>
+                        <segue destination="MEP-uI-nHg" kind="show" identifier="scannerToTransaction" id="wzG-ZW-Zh3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFf-v5-p5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5tY-pG-aea"/>
+    </inferredMetricsTieBreakers>
 </document>
