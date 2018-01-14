@@ -10,6 +10,7 @@ struct ApplicationStorage {
 
     var organizationTrees: [OrganizationTree] = []
     var permissions: [Permission] = []
+    var myTransactions: [TransactionRow] = []
 
     init(profile: UserInfo, credentials: Credentials) {
         self.profile = profile

@@ -13,6 +13,7 @@ class Event {
     let requireOrganizationName: Bool
     let assignIntegerToRegistrant: Bool
     let requirePhoto: Bool
+    let qr: Bool
     let facebookEventId: String?
     let twitterUrl: String?
     let websiteUrl: String?
@@ -38,6 +39,7 @@ class Event {
         requireOrganizationName: Bool,
         assignIntegerToRegistrant: Bool,
         requirePhoto: Bool,
+        qr: Bool,
         facebookEventId: String?,
         twitterUrl: String?,
         websiteUrl: String?,
@@ -62,6 +64,7 @@ class Event {
         self.requireOrganizationName = requireOrganizationName
         self.assignIntegerToRegistrant = assignIntegerToRegistrant
         self.requirePhoto = requirePhoto
+        self.qr = qr
         self.facebookEventId = facebookEventId
         self.twitterUrl = twitterUrl
         self.websiteUrl = websiteUrl

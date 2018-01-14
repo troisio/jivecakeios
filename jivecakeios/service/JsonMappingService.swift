@@ -64,6 +64,7 @@ class JsonMappingService {
             requireOrganizationName: json["requireOrganizationName"].boolValue,
             assignIntegerToRegistrant: json["assignIntegerToRegistrant"].boolValue,
             requirePhoto: json["requirePhoto"].boolValue,
+            qr: json["qr"].boolValue,
             facebookEventId: json["facebookEventId"].string,
             twitterUrl: json["twitterUrl"].string,
             websiteUrl: json["websiteUrl"].string,

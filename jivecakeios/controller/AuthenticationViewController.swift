@@ -19,7 +19,7 @@ class AuthenticationViewController: UIViewController {
             Future<(Credentials), AnyError> { complete in
                 Auth0
                     .webAuth()
-                    .scope("openid profile")
+                    .scope("openid profile email name user_metadata")
                     .audience("https://jivecake.auth0.com/userinfo")
                     .start {
                         switch $0 {

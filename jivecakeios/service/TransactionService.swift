@@ -171,7 +171,7 @@ class TransactionService {
                 switch response.result {
                 case .success(let data):
                     let data = JSON(data)
-                    let transactions = data.arrayValue.map { JsonMappingService.toTransaction(json: $0) }
+                    let transactions = data["entity"].arrayValue.map { JsonMappingService.toTransaction(json: $0) }
                     complete(.success(transactions))
                 case .failure(let error):
                     complete(.failure(AnyError(error: error)))
@@ -180,21 +180,124 @@ class TransactionService {
         }
     }
 
+    func getTransactionRowFromSub(sub: String) -> Future<[TransactionRow], AnyError> {
+        return self.search(parameters: [
+            "userId": sub,
+            "order": "-timeCreated",
+            "limit": "100"
+        ]).flatMap { transactions -> Future<[TransactionRow], AnyError> in
+            let coveringTransactionsForEvents = Dictionary(grouping: transactions, by: { $0.eventId }).flatMap({ (_, value) in value[0]})
+            let coveringTransactionsForItem = Dictionary(grouping: transactions, by: { $0.itemId }).flatMap({ (_, value) in value[0]})
+            let coveringTransactionsForOrganizations = Dictionary(grouping: transactions, by: { $0.organizationId }).flatMap({ (_, value) in value[0]})
+
+            let eventFutures = coveringTransactionsForEvents.map { self.getEvent(id: $0.id) }.sequence()
+            let itemFutures = coveringTransactionsForItem.map { self.getItem(id: $0.id) }.sequence()
+            let organizationFutures = coveringTransactionsForOrganizations.map { self.getOrganization(id: $0.id) }.sequence()
+
+            return organizationFutures.flatMap { organizations in
+                eventFutures.flatMap { events in
+                    itemFutures.flatMap { items in
+                        Future(value: (organizations, events, items))
+                    }
+                }
+            }.flatMap { (organizations, events, items) -> Future<[TransactionRow], AnyError> in
+                let idToEvent = Dictionary(grouping: events, by: { $0.id })
+                let idToItem = Dictionary(grouping: items, by:  { $0.id })
+                let idToOrganization = Dictionary(grouping: organizations, by:  { $0.id })
+
+                let rows = transactions.map {
+                    TransactionRow(
+                        transaction: $0,
+                        item: idToItem[$0.itemId]![0],
+                        event: idToEvent[$0.eventId]![0],
+                        organization: idToOrganization[$0.organizationId]![0],
+                        userInfo: nil
+                    )
+                }
+                
+                return Future(value: rows)
+            }
+        }
+    }
+
+    func getEvent(id: String) -> Future<Event, AnyError> {
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(self.idToken)"
+        ]
+
+        return Future<Event, AnyError> { complete in
+            Alamofire.request(
+                "\(self.uri)/transaction/\(id)/event",
+                headers: headers
+            ).responseJSON { response in
+                switch response.result {
+                case .success(let data):
+                    let data = JSON(data)
+                    complete(.success(JsonMappingService.toEvent(json: data)))
+                case .failure(let error):
+                    complete(.failure(AnyError(error: error)))
+                }
+            }
+        }
+    }
+
+    func getItem(id: String) -> Future<Item, AnyError> {
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(self.idToken)"
+        ]
+
+        return Future<Item, AnyError> { complete in
+            Alamofire.request(
+                "\(self.uri)/transaction/\(id)/item",
+                headers: headers
+                ).responseJSON { response in
+                    switch response.result {
+                    case .success(let data):
+                        let data = JSON(data)
+                        complete(.success(JsonMappingService.toItem(json: data)))
+                    case .failure(let error):
+                        complete(.failure(AnyError(error: error)))
+                    }
+            }
+        }
+    }
+
+    func getOrganization(id: String) -> Future<Organization, AnyError> {
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(self.idToken)"
+        ]
+
+        return Future<Organization, AnyError> { complete in
+            Alamofire.request(
+                "\(self.uri)/transaction/\(id)/organization",
+                headers: headers
+                ).responseJSON { response in
+                    switch response.result {
+                    case .success(let data):
+                        let data = JSON(data)
+                        complete(.success(JsonMappingService.toOrganization(json: data)))
+                    case .failure(let error):
+                        complete(.failure(AnyError(error: error)))
+                    }
+            }
+        }
+    }
+
     static func derivedDisplayedTransactionIdentity(transaction: Transaction, userInfo: UserInfo?) -> String {
         var result = ""
-        
+
         if let info = userInfo {
             if info.givenName == nil && info.familyName == nil {
                 result = info.name ?? info.email ?? ""
             } else {
                 result += info.givenName ?? ""
-                
-                if info.familyName != nil {
-                    if result == "" {
+
+                if let familyName = info.familyName {
+                    if result != "" {
                         result += " "
                     }
 
-                    result += "\(info.familyName!)"
+                    result += familyName
                 }
             }
         } else {

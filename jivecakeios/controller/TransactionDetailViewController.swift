@@ -7,34 +7,30 @@ class TransactionDetailViewController: UIViewController {
     var event: Event?
     var userInfo: UserInfo?
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var eventValue: UILabel!
     @IBOutlet weak var nameValue: UILabel!
-    @IBOutlet weak var eventItemValue: UILabel!
     @IBOutlet weak var amountValue: UILabel!
     @IBOutlet weak var quantityValue: UILabel!
     @IBOutlet weak var statusValue: UILabel!
     @IBOutlet weak var paymentMethodValue: UILabel!
+    @IBOutlet weak var itemValue: UILabel!
 
     override func viewDidLoad() {
         let statusText: String
-        let statusColor: UIColor
         let paymentMethodValue: String
 
         switch self.transaction!.status {
         case TransactionService.SETTLED:
             statusText = "settled"
-            statusColor = Color.SUCCESS_COLOR
         case TransactionService.PENDING:
             statusText = "pending"
-            statusColor = Color.PENDING_COLOR
         case TransactionService.USER_REVOKED:
             statusText = "revoked"
-            statusColor = Color.FAILURE_COLOR
         case TransactionService.REFUNDED:
             statusText = "refunded"
-            statusColor = Color.FAILURE_COLOR
         default:
             statusText = "unknown"
-            statusColor = UIColor.black
         }
 
         if let linkedObjectClass = transaction?.linkedObjectClass {
@@ -49,12 +45,34 @@ class TransactionDetailViewController: UIViewController {
             paymentMethodValue = "JiveCake"
         }
 
+        if let event = self.event {
+            if event.qr {
+                self.imageView.image = self.generateQRCode()
+            }
+        }
+        
         self.nameValue.text = TransactionService.derivedDisplayedTransactionIdentity(transaction: self.transaction!, userInfo: self.userInfo)
-        self.eventItemValue.text = "\(self.event!.name) / \(self.item!.name)"
+        self.eventValue.text = "\(self.event!.name)"
+        self.itemValue.text = "\(self.item!.name)"
         self.amountValue.text = String(format:"%.2f", transaction!.amount)
         self.quantityValue.text = "\(self.transaction!.quantity)"
         self.statusValue.text = statusText
-        self.statusValue.textColor = statusColor
         self.paymentMethodValue.text = paymentMethodValue
+    }
+
+    func generateQRCode() -> UIImage? {
+        if let transaction = self.transaction {
+            let data = transaction.id.data(using: String.Encoding.ascii)
+            
+            if let filter = CIFilter(name: "CIQRCodeGenerator") {
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 3, y: 3)
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    return UIImage(ciImage: output)
+                }
+            }
+        }
+        
+        return nil
     }
 }

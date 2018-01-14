@@ -5,33 +5,35 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
     var rows: [TransactionRow] = []
     let reloadControl = UIRefreshControl()
     var selectedRow: TransactionRow?
-    
+    var lastSearchText = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.setRowsFromStorage(storage: ApplicationState.storage!)
-
+        self.rows = self.getRowsFromStorage(storage: ApplicationState.storage!)
+        self.displayRows = self.rows
+        
         self.reloadControl.addTarget(self, action: #selector(TransactionViewController.onRefresh(_:)), for: UIControlEvents.valueChanged)
         self.reloadControl.tintColor = Color.PENDING_COLOR.withAlphaComponent(0.6)
         self.tableView.addSubview(self.reloadControl)
     }
 
-    func setRowsFromStorage(storage: ApplicationStorage) {
-        self.rows = storage.organizationTrees
+    func getRowsFromStorage(storage: ApplicationStorage) -> [TransactionRow] {
+        return storage.organizationTrees
             .map { TransactionService.getTransactionRows(tree: $0) }
             .flatMap { $0 }
-            .filter { $0.transaction.leaf }
+            .filter {
+                $0.transaction.leaf &&
+                $0.transaction.status == TransactionService.SETTLED
+            }
             .sorted { $0.transaction.timeCreated > $1.transaction.timeCreated }
-        
-        /* this is not correct, has to be derived from search bar */
-        self.displayRows = self.rows
     }
 
     @objc func onRefresh(_ sender: Any) {
         ApplicationService.getStorageFromCredentials(credentials: ApplicationState.storage!.credentials)
             .onSuccess { storage in
                 ApplicationState.storage = storage
-                self.setRowsFromStorage(storage: storage)
+                self.rows = self.getRowsFromStorage(storage: storage)
+                self.displayRows = self.rows.filter { TransactionViewController.isFiltered(row: $0, search: self.lastSearchText) }
                 self.tableView.reloadData()
                 self.reloadControl.endRefreshing()
             }.onFailure { error in
@@ -71,7 +73,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
         self.selectedRow = self.displayRows[indexPath.row]
         self.performSegue(withIdentifier: "selectTranscation", sender: self)
     }
-    
+
     func searchBarSearchButtonClicked(_ bar: UISearchBar) {
         bar.resignFirstResponder()
     }
@@ -97,6 +99,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange search: String) {
+        self.lastSearchText = search
         self.displayRows = self.rows.filter { TransactionViewController.isFiltered(row: $0, search: search) }
         self.tableView.reloadData()
     }
