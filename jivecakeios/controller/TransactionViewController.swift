@@ -21,10 +21,7 @@ class TransactionViewController: UITableViewController, UISearchBarDelegate {
         return storage.organizationTrees
             .map { TransactionService.getTransactionRows(tree: $0) }
             .flatMap { $0 }
-            .filter {
-                $0.transaction.leaf &&
-                $0.transaction.status == TransactionService.SETTLED
-            }
+            .filter { $0.transaction.leaf }
             .sorted { $0.transaction.timeCreated > $1.transaction.timeCreated }
     }
 
